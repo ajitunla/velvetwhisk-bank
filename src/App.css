@@ -8,45 +8,40 @@ body {
 }
 
 .app-container {
-  max-width: 400px;
-  margin: 60px auto;
+  max-width: 500px;
+  margin: 40px auto;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-}
-
-.app-header {
-  background-color: #4b0076;
-  color: white;
-  padding: 30px 20px;
+  padding: 30px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
 }
 
-.app-header h1 {
-  margin: 0;
-  font-size: 24px;
+h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
 
-.app-header p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  opacity: 0.9;
+.hero-section {
+  background-color: #e0e7ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-.login-box, .transfer-box {
-  padding: 25px 20px;
+.hero-section h2 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
 }
 
-.login-box h2, .transfer-box h2 {
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: #222;
+.hero-section p {
+  color: #374151;
+  font-size: 15px;
 }
 
 label {
   display: block;
+  text-align: left;
   margin: 10px 0 5px;
   font-weight: 600;
   font-size: 14px;
@@ -55,50 +50,40 @@ label {
 input {
   width: 100%;
   padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
   margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 button {
   width: 100%;
-  padding: 10px;
-  background-color: #4b0076;
+  padding: 12px;
+  background-color: #1e40af;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 15px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 15px;
   margin-bottom: 10px;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #360054;
-}
-
-.secondary-button {
-  background-color: #f0f0f0;
-  color: #444;
-}
-
-.secondary-button:hover {
-  background-color: #e0e0e0;
+  background-color: #1e3a8a;
 }
 
 .transactions {
-  padding: 20px;
-  border-top: 1px solid #eee;
-}
-
-.transactions h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-top: 30px;
+  text-align: left;
 }
 
 .transaction-item {
-  background: #f9f9f9;
-  padding: 10px 12px;
-  border-radius
+  background-color: #eef3f7;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+}

@@ -40,32 +40,39 @@ function App() {
       setPinInput('');
       setShowTransferForm(false);
     } else {
-      alert("Please fill all fields correctly and enter the correct PIN (1952).");
+      alert("Please fill all fields correctly and enter the correct PIN (1952).);
     }
   };
 
   return (
     <div className="app-container">
       <h1>VelvetWhisk Bank</h1>
+
       {!isAuthenticated ? (
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            value={emailInput}
-            onChange={(e) => setEmailInput(e.target.value)}
-            placeholder="Enter your email"
-          />
+        <div className="login-wrapper">
+          <div className="hero-section">
+            <h2>Welcome to VelvetWhisk Bank</h2>
+            <p>Securely manage your transactions online</p>
+          </div>
+          <div className="login-card">
+            <label>Email</label>
+            <input
+              type="email"
+              value={emailInput}
+              onChange={(e) => setEmailInput(e.target.value)}
+              placeholder="Enter your email"
+            />
 
-          <label>Password</label>
-          <input
-            type="password"
-            value={passwordInput}
-            onChange={(e) => setPasswordInput(e.target.value)}
-            placeholder="Enter your password"
-          />
+            <label>Password</label>
+            <input
+              type="password"
+              value={passwordInput}
+              onChange={(e) => setPasswordInput(e.target.value)}
+              placeholder="Enter your password"
+            />
 
-          <button onClick={handleLogin}>Log In</button>
+            <button onClick={handleLogin}>Log In</button>
+          </div>
         </div>
       ) : (
         <>
