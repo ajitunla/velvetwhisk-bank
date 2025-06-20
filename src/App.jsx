@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 function App() {
   const [amount, setAmount] = useState('');
@@ -39,72 +40,72 @@ function App() {
 
   return (
     <div>
-      <h1>VelvetWhisk Bank</h1>
+      <div className="app-header">
+        <h1>VelvetWhisk Bank</h1>
+        <p>Account: Elizabeth Eads</p>
+      </div>
 
       {!isAuthenticated ? (
-        <div>
-          <label>Email</label><br />
+        <div className="login-box">
+          <h2>Login</h2>
+
           <input
             type="email"
             value={emailInput}
             onChange={(e) => setEmailInput(e.target.value)}
-            placeholder="Enter your email"
-          /><br /><br />
-
-          <label>Password</label><br />
+            placeholder="Email"
+          />
           <input
             type="password"
             value={passwordInput}
             onChange={(e) => setPasswordInput(e.target.value)}
-            placeholder="Enter your password"
-          /><br /><br />
-
+            placeholder="Password"
+          />
           <button onClick={handleLogin}>Log In</button>
+
+          <div className="login-options">
+            <button>Create Account</button>
+            <button>Forgot Password?</button>
+          </div>
         </div>
       ) : (
-        <div>
+        <div className="login-box">
           <p><strong>Account:</strong> Elizabeth Eads</p>
           <p><strong>Balance:</strong> ${balance.toLocaleString()}</p>
 
           {showTransferForm ? (
-            <div>
-              <label>Recipient</label><br />
+            <>
               <input
                 type="text"
                 value={recipient}
                 onChange={(e) => setRecipient(e.target.value)}
                 placeholder="Recipient Name"
-              /><br /><br />
-
-              <label>Amount</label><br />
+              />
               <input
                 type="number"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
                 placeholder="Amount"
-              /><br /><br />
-
-              <label>PIN</label><br />
+              />
               <input
                 type="password"
                 value={pinInput}
                 onChange={(e) => setPinInput(e.target.value)}
                 placeholder="Enter PIN"
-              /><br /><br />
-
+              />
               <button onClick={handleTransfer}>Send Money</button>
               <button onClick={() => setShowTransferForm(false)}>Cancel</button>
-            </div>
+            </>
           ) : (
             <button onClick={() => setShowTransferForm(true)}>Make a Transfer</button>
           )}
 
-          <h3>Transaction History</h3>
-          <ul>
+          <div className="transactions">
+            <h3>Transaction History</h3>
             {transactions.map((t, index) => (
-              <li key={index}>{t}</li>
+              <div key={index} className="transaction-item">{t}</div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>
