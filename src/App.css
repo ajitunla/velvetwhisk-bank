@@ -1,46 +1,104 @@
+/* App.css */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fb;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.app-container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
 .app-header {
-  background-color: #4B0082;
+  background-color: #4b0076;
   color: white;
-  padding: 30px 0;
-  border-radius: 0 0 10px 10px;
+  padding: 30px 20px;
   text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
 .app-header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 24px;
 }
 
 .app-header p {
   margin: 5px 0 0;
-  font-size: 0.9rem;
+  font-size: 14px;
   opacity: 0.9;
 }
 
-.login-box {
-  background: white;
-  max-width: 400px;
-  margin: 30px auto;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  text-align: center;
+.login-box, .transfer-box {
+  padding: 25px 20px;
 }
 
-.login-box h2 {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  color: #333;
+.login-box h2, .transfer-box h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #222;
 }
 
-.login-box input {
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4b0076;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #360054;
+}
+
+.secondary-button {
+  background-color: #f0f0f0;
+  color: #444;
+}
+
+.secondary-button:hover {
+  background-color: #e0e0e0;
+}
+
+.transactions {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.transactions h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.transaction-item {
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius
